@@ -1,0 +1,34 @@
+.button {
+	width:200px;
+	height:80px;
+	background: #e0e0e0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#e0e0e0,#bdbdbd); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#e0e0e0,#bdbdbd); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#e0e0e0,#bdbdbd); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#e0e0e0,#bdbdbd); /* Standard syntax (must be last) */
+    border-radius: 5px;
+    border: 1px solid #3f3f3f;
+}
+
+.text-wrapper {
+	display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-text {
+	margin:auto;
+	font-family: "Verdana", Verdana, sans-serif;
+
+}
+
+.remove-button {
+	float:left, top;
+	width:16px;
+	height:16px;
+	padding: 2px;
+}
+
+.remove-button:active {
+	opacity: 0.5;
+}
