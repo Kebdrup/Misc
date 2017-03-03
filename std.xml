@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<buttons x_units="7" y_units="6">
+               <button id="1" text="Forside" action="20000" color="1" font="1" enabled="1">
+                             <location x="0" y="0"/>
+                             <size width="2" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="2" text="Slet" action="25002" color="1" font="1" enabled="1">
+                             <location x="2" y="0"/>
+                             <size width="2" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="3" text="MSG" action="25001" color="1" font="1" enabled="1">
+                             <location x="4" y="0"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="4" text="Kontant" action="10" color="1" font="1" enabled="1" btype="k">
+                             <location x="5" y="0"/>
+                             <size width="2" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="5" text="Parker bord" action="600" color="1" font="1" enabled="1">
+                             <location x="0" y="1"/>
+                             <size width="2" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="6" text="Hent bord" action="601" color="1" font="1" enabled="1">
+                             <location x="2" y="1"/>
+                             <size width="2" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="7" text="X" action="25003" color="1" font="1" enabled="1">
+                             <location x="4" y="1"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="8" text="Dankort" action="11" color="1" font="1" enabled="1" btype="d">
+                             <location x="5" y="1"/>
+                             <size width="2" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="9" text="Parker bord" action="600" p1="" color="1" font="1" enabled="1">
+                             <location x="0" y="2"/>
+                             <size width="2" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="10" text="Hent bord" action="601" p1="" color="1" font="1" enabled="1">
+                             <location x="2" y="2"/>
+                             <size width="2" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="11" text="7" action="10050" p1="7" color="1" font="2" enabled="1">
+                             <location x="4" y="2"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="12" text="8" action="10050" p1="8" color="1" font="2" enabled="1">
+                             <location x="5" y="2"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="13" text="9" action="10050" p1="9" color="1" font="2" enabled="1">
+                             <location x="6" y="2"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="14" text="Find bon" action="2000" p1="" color="1" font="1" enabled="1">
+                             <location x="0" y="3"/>
+                             <size width="2" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="15" text="Split" action="603" p1="" color="1" font="1" enabled="1">
+                             <location x="2" y="3"/>
+                             <size width="2" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="16" text="4" action="10050" p1="4" color="1" font="2" enabled="1">
+                             <location x="4" y="3"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="17" text="5" action="10050" p1="5" color="1" font="2" enabled="1">
+                             <location x="5" y="3"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="18" text="6" action="10050" p1="6" color="1" font="2" enabled="1">
+                             <location x="6" y="3"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="19" text="Kort betaling" action="22" p1="" color="1" font="1" enabled="1">
+                             <location x="0" y="4"/>
+                             <size width="2" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="20" text="Indbetaling" action="23" p1="" color="1" font="1" enabled="1">
+                             <location x="2" y="4"/>
+                             <size width="2" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="21" text="1" action="10050" p1="1" color="1" font="2" enabled="1">
+                             <location x="4" y="4"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="22" text="2" action="10050" p1="2"  color="1" font="2" enabled="1">
+                             <location x="5" y="4"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="23" text="3" action="10050" p1="3" color="1" font="2" enabled="1">
+                             <location x="6" y="4"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="24" text="Åben Pengeskuffe" action="2002" p1="" color="1" font="1" enabled="1">
+                             <location x="0" y="5"/>
+                             <size width="4" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="25" text="0" action="10050" p1="0" color="1" font="2" enabled="1">
+                             <location x="4" y="5"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="26" text="C" action="10051" p1="C" color="1" font="2" enabled="1">
+                             <location x="5" y="5"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+               <button id="27" text="ENT" action="10052" p1="" color="1" font="1" enabled="1">
+                             <location x="6" y="5"/>
+                             <size width="1" height="1"/>
+                             <message popup="0" popuptime="2000">
+                                            <![CDATA[]]>
+                             </message>
+                             <tag>
+                                            <![CDATA[]]>
+                             </tag>
+               </button>
+</buttons>
+
+
+ 
+
