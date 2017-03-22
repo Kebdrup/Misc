@@ -3,31 +3,36 @@
 	display: table;
 }
 
+.menu {
+	width:500px;
+	border-collapse: collapse;
+	border: 1px solid grey;
+}
+
 .tab {
-	background-color: #ccccff;
+	background-color: #deeff5;
 	border: 1px solid grey;
 	display: table-cell;
 	padding: 5px;
+	text-align:center;
 }
 
 .tab-text {
 	margin: auto;
 }
 
-.menu-body {
+.tab-content {
 	width: 100%;
 	height: 500px;
 }
 
-.menu {
-	width:200px;
-	border-collapse: collapse;
-	border: 1px solid grey;
+.tab-content-actual {
+	display:none;
+	padding: 10px;
+	display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
 }
 
-.menu-fade {
-	width:100%;
-	height: 30px;
-	background-color: #ccccff;
-	background: linear-gradient(#ccccff, white); /* Standard syntax */
-}
+
+

@@ -3,26 +3,80 @@
 <head>
 	<title>Tabs!</title>
 	<link rel="stylesheet" href="tabs.css" type="text/css">
+	<link rel="stylesheet" href="button.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="tabs.js"></script>
 </head>
 <body>
 	<div class="menu">
 		<div class="menu-tabs">
-			<div class="tab">
-				<span class="tab-text">Tab1</span>
+			<div class="tab" id="tab-1">
+				<span class="tab-text">Betalingsmiddler</span>
 			</div>		
-			<div class="tab">
-				<span class="tab-text">Tab2</span>
+			<div class="tab" id="tab-2">
+				<span class="tab-text">Funktioner</span>
 			</div>
-			<div class="tab" style="border-bottom: 0">
-				<span class="tab-text">Tab3</span>
+			<div class="tab" id="tab-3">
+				<span class="tab-text">Kort</span>
 			</div>
-			<div class="tab">
-				<span class="tab-text">Tab4</span>
+			<div class="tab" id="tab-4">
+				<span class="tab-text">Misc</span>
 			</div>
 		</div>
-		<div class="menu-fade"></div>
-		<div class="menu-body">
-			
+		<div class="tab-content">
+			<div id="content-1" class='tab-content-actual'>
+				<div class="button">
+					<span class="button-text">Kontant</span>
+				</div>
+				<div class="button">
+					<span class="button-text">Kontant</span>
+				</div>
+				<div class="button">
+					<span class="button-text">Kontant</span>
+				</div>
+				<div class="button">
+					<span class="button-text">Kontant</span>
+				</div>
+				<div class="button">
+					<span class="button-text">Kontant</span>
+				</div>
+				<div class="button">
+					<span class="button-text">Kontant</span>
+				</div>
+				<div class="button">
+					<span class="button-text">Kontant</span>
+				</div>
+			</div>
+			<div id="content-2" class='tab-content-actual'>
+				<div class="button">
+					<span class="button-text">Funktion</span>
+				</div>
+				<div class="button">
+					<span class="button-text">Funktion</span>
+				</div>
+				<div class="button">
+					<span class="button-text">Funktion</span>
+				</div>
+				<div class="button">
+					<span class="button-text">Funktion</span>
+				</div>
+				<div class="button">
+					<span class="button-text">Funktion</span>
+				</div>
+			</div>
+			<div id="content-3" class='tab-content-actual'>
+				<div class="button">
+					<span class="button-text">Card1</span>
+				</div>
+				<div class="button">
+					<span class="button-text">Card2</span>
+				</div>
+			</div>
+			<div id="content-4" class='tab-content-actual'>
+				<div class="button">
+					<span class="button-text">Misc</span>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
