@@ -1,0 +1,44 @@
+#button_grid {
+	border-collapse: collapse;
+	background-color: grey;
+	border: 1px solid black;
+}
+
+.drag_zone {
+	width: 80%;
+	height: 80%;
+}
+.drop-zone {	
+	width: 20%;
+	height: 20%;
+	margin: auto;
+}
+
+.grid_cell {
+	width: 100px;
+	height: 100px;
+	border: 1px solid yellow;
+}
+
+.text-wrapper {
+	display:flex;
+    	justify-content: center;
+    	align-items: center;
+}
+
+.button-text {
+	margin:auto;
+	font-family: "Verdana", Verdana, sans-serif;
+
+}
+
+.remove-button {
+	float:left, top;
+	width:16px;
+	height:16px;
+	padding: 2px;
+}
+
+.remove-button:active {
+	opacity: 0.5;
+}

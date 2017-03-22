@@ -1,0 +1,21 @@
+.button {
+	width:100px;
+	height:80px;
+	background: #e0e0e0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#e0e0e0,#bdbdbd); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#e0e0e0,#bdbdbd); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#e0e0e0,#bdbdbd); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#e0e0e0,#bdbdbd); /* Standard syntax (must be last) */
+    border-radius: 5px;
+    border: 1px solid #3f3f3f;
+    text-align: center;
+    margin: 5px;
+    line-height: 70px;
+}
+
+.button-text {
+	vertical-align: center;
+	width: 100%;
+	font-family: "Verdana", Verdana, sans-serif;
+
+}
