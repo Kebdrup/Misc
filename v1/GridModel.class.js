@@ -6,7 +6,6 @@ function GridModel(x,y){
 	this.button_grids = [];
 	this.addButton = function(button){
 		var intersect = check_for_intersect(this.button_grids, this.buttons);
-		//alert(intersect);
 		this.button_grids.sort(function(a,b){
 			return (a[0]+a[1])-(b[0]+b[1]);
 		});
@@ -41,9 +40,9 @@ function GridModel(x,y){
 			}
 		}
 		//create and add new button
+		var button_id = button.prop("id")
 		var new_button ={
-			"id" : button.prop("id"),
-			"index" : this.buttons.length,
+			"id" : button_id.substring(button_id.indexOf("-")+1, button_id.length),
 			"function" : button.prop("data-function"),
 			"grids" : this.button_grids
 			};

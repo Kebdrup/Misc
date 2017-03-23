@@ -20,15 +20,13 @@ $(document).ready(function(){
 	$.ajax({
 		url: "buttons.json",
 		success: function(tabs){
-			//alert(JSON.stringify(json));
-
 			var html = "";
 			var margin = 10;
 			var menu_width = 500;
 			var button_height = 80;
 			var tab_index = 1;
+			//foreach tab
 			$.each(tabs, function(){
-				//alert(JSON.stringify(this.buttons));
 				html_tab = '<div class="tab" id="tab-'+tab_index+'"><span class="tab-text">'+this.tab+'</span></div>';
 				var top = margin;
 				var left = margin;
@@ -37,7 +35,7 @@ $(document).ready(function(){
 					//generates button html
 					var button_width = parseInt(this.width); 
 					var position_css = 'left:'+left+';top:'+top+';';
-					html_buttons += '<div class="button resizable draggable" style="position:absolute;'+position_css+'" data-default-top="'+top+'" data-default-left="'+left+'"><div class="drag-zone"><span class="button-text">'+this.name+'</span></div></div>';
+					html_buttons += '<div id="button-'+this.id+'" class="button resizable draggable" style="position:absolute;'+position_css+'" data-default-top="'+top+'" data-default-left="'+left+'"><div class="drag-zone"><span class="button-text">'+this.name+'</span></div></div>';
 					//set position of the next button
 					left += (margin+button_width);
 					if((left+button_width+margin) > menu_width){//if true the button will overflow the container
@@ -91,11 +89,30 @@ $(document).ready(function(){
 
 			//remove button from grid
 			$(".button").on("mousedown", function(){
+				var current_id = this.id;
 				window.gridmodel.button_grid = [];
+				$.each(gridmodel.buttons, function(index){
+					this.id = current_id;
+					gridmodel.buttons.splice(index,1);
+				});
 			});
 
 			//load grid
 			setGridDimensions();
+		}
+	});
+
+	//save button bind
+	$("#save-layout").on("click", function(){
+		if(window.gridmodel.buttons.length > 0){
+			$.ajax({
+				method: "POST",
+				url: 'save_layout.php',
+				data: {"data" : JSON.stringify(window.gridmodel.buttons)},			
+				success: function(data){
+					$("#feedback").html(data);
+				}
+			});
 		}
 	});
 });

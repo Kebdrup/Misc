@@ -9,13 +9,13 @@
 		<script src="onload.js"></script>
 	</head>
 	<body>
-	<div class="menu">
-		<div class="menu-tabs">		
+		<div class="menu" style="float:left">
+			<div class="menu-tabs">		
+			</div>
+			<div class="tab-content">
+			</div>
 		</div>
-		<div class="tab-content">
-		</div>
-	</div>
-		<div style="position:relative">
+		<div style="position:relative;float:left">
 			<form action="javascript:setGridDimensions()" method="POST" id="grid-setter">
 				<div class="input_grid_wrapper">
 					<input id="grid_x" type="number" min="1" max="5" step="1" value="5" />
@@ -23,7 +23,9 @@
 					<input type="submit" value="Go!" />
 				</div>
 			<form>
-		</form>
-		<table id="button_grid" class="droppable"></table>
+			<table id="button_grid" class="droppable"></table>
+			<button type="button" id="save-layout">Save</button>
+		</div>
+		<span id='feedback'></span>
 	</body>
 </html>

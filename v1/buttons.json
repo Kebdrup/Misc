@@ -1,1 +1,57 @@
-[{"tab" : "Funktioner", "buttons" : [{"name" : "Kontant", "function" : "kontant", "width": "100"},{"name" : "Kontant", "function" : "kontant", "width": "100"},{"name" : "Kontant", "function" : "kontant", "width": "100"},{"name" : "Kontant", "function" : "kontant", "width": "100"},{"name" : "Funktion", "function" : "kontant", "width": "100"}]}, {"tab" : "Betalingsmiddler", "buttons" : [{"name" : "Kontant", "function" : "kontant", "width": "100"},{"name" : "Kontant", "function" : "kontant", "width": "100"},{"name" : "Kontant", "function" : "kontant", "width": "100"},{"name" : "Kontant", "function" : "kontant", "width": "100"},{"name" : "Kontant", "function" : "kontant", "width": "100"}]}]
+[{
+	"tab": "Funktioner",
+	"buttons": [{
+		"id" : "1",
+		"name": "Kontant",
+		"function": "kontant",
+		"width": "100"
+	}, {
+		"id" : "2",
+		"name": "Kontant",
+		"function": "kontant",
+		"width": "100"
+	}, {
+		"id" : "3",
+		"name": "Kontant",
+		"function": "kontant",
+		"width": "100"
+	}, {
+		"id" : "4",
+		"name": "Kontant",
+		"function": "kontant",
+		"width": "100"
+	}, {
+		"id" : "5",
+		"name": "Funktion",
+		"function": "kontant",
+		"width": "100"
+	}]
+}, {
+	"tab": "Betalingsmiddler",
+	"buttons": [{
+		"id" : "6",
+		"name": "Kontant",
+		"function": "kontant",
+		"width": "100"
+	}, {
+		"id" : "7",
+		"name": "Kontant",
+		"function": "kontant",
+		"width": "100"
+	}, {
+		"id" : "8",
+		"name": "Kontant",
+		"function": "kontant",
+		"width": "100"
+	}, {
+		"id" : "9",
+		"name": "Kontant",
+		"function": "kontant",
+		"width": "100"
+	}, {
+		"id" : "10",
+		"name": "Kontant",
+		"function": "kontant",
+		"width": "100"
+	}]
+}]
