@@ -35,7 +35,7 @@ $(document).ready(function(){
 					//generates button html
 					html_buttons += '<div class="button"><span class="button-text">'+this.name+'</span></div>';
 				});
-				html_content = '<div id="content-5" class="tab-content-actual">'+html_buttons+'/<div>';
+				html_content = '<div id="content-5" class="tab-content-actual">'+html_buttons+'</div>';
 				//append to html
 				$(".menu-tabs").append(html_tab);
 				$(".tab-content").append(html_content);
