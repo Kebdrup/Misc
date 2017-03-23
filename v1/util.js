@@ -30,7 +30,8 @@ function check_for_intersect(grids, buttons){
 	}
 	return false;
 }
-function setGridDimensions(form){
+function setGridDimensions(){
+	var form = $("#grid-setter");
 	$("button_grid").html("");
 	var x = $("#grid_x").val();
 	var y = $("#grid_y").val();

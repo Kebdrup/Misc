@@ -4,9 +4,9 @@
 	border: 1px solid black;
 }
 
-.drag_zone {
-	width: 80%;
-	height: 80%;
+.drag-zone {
+	width: 100%;
+	height: 100%;
 	z-index: 2;
 }
 .drop-zone {	
@@ -77,9 +77,6 @@
 	display:none;
 	position: relative;
 	padding: 10px;
-	display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
 }
 
 .button {
@@ -97,6 +94,10 @@
     margin: 5px;
     line-height: 70px;
     z-index: 5;
+}
+
+.button:hover {
+	cursor: grab;
 }
 
 .button-text {

@@ -37,7 +37,7 @@ $(document).ready(function(){
 					//generates button html
 					var button_width = parseInt(this.width); 
 					var position_css = 'left:'+left+';top:'+top+';';
-					html_buttons += '<div class="button resizable draggable" style="position:absolute;'+position_css+'"><div class="drag-zone"><span class="button-text">'+this.name+'</span></div></div>';
+					html_buttons += '<div class="button resizable draggable" style="position:absolute;'+position_css+'" data-default-top="'+top+'" data-default-left="'+left+'"><div class="drag-zone"><span class="button-text">'+this.name+'</span></div></div>';
 					//set position of the next button
 					left += (margin+button_width);
 					if((left+button_width+margin) > menu_width){//if true the button will overflow the container
@@ -54,11 +54,8 @@ $(document).ready(function(){
 
 			//set drag, drop and resizablility for buttons
 			$(".draggable").draggable({
-				revert: function(){
-					var position = $(this).position();
-					var x = position.left;
-					var y = position.top;
-				},
+				revert: "invalid",
+				revertDuration: 200,
 				handle: ".drag-zone"
 			});
 
@@ -91,6 +88,14 @@ $(document).ready(function(){
 			});
 			//start at tab 2, hide all tabscontent
 			set_tab($("#tab-1")[0]);
+
+			//remove button from grid
+			$(".button").on("mousedown", function(){
+				window.gridmodel.button_grid = [];
+			});
+
+			//load grid
+			setGridDimensions();
 		}
 	});
 });
