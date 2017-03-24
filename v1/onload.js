@@ -89,11 +89,14 @@ $(document).ready(function(){
 
 			//remove button from grid
 			$(".button").on("mousedown", function(){
-				var current_id = this.id;
+				var id_attr = this.id;
+				var current_id = id_attr.substring(id_attr.indexOf("-")+1, id_attr.length);
 				window.gridmodel.button_grid = [];
-				$.each(gridmodel.buttons, function(index){
-					this.id = current_id;
-					gridmodel.buttons.splice(index,1);
+				//check all buttons for this button
+				$.each(window.gridmodel.buttons, function(index, button){
+					if(button.id == current_id){
+						gridmodel.buttons.splice(index,1);
+					}
 				});
 			});
 
