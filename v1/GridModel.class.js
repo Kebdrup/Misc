@@ -43,6 +43,7 @@ function GridModel(x,y){
 		var button_id = button.prop("id")
 		var new_button ={
 			"id" : button_id.substring(button_id.indexOf("-")+1, button_id.length),
+			"text": button.find("span").html(),
 			"function" : button.prop("data-function"),
 			"grids" : this.button_grids
 			};

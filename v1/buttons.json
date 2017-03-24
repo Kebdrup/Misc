@@ -3,55 +3,228 @@
 	"buttons": [{
 		"id" : "1",
 		"name": "Kontant",
-		"function": "kontant",
+		"function": "cash",
+		"action" : "10",
 		"width": "100"
 	}, {
 		"id" : "2",
-		"name": "Kontant",
-		"function": "kontant",
+		"name": "Dankort",
+		"function": "kreditcard",
+		"action" : "11",
 		"width": "100"
 	}, {
 		"id" : "3",
-		"name": "Kontant",
-		"function": "kontant",
+		"name": "Kredit",
+		"function": "credit",
+		"action" : "15",
 		"width": "100"
 	}, {
 		"id" : "4",
-		"name": "Kontant",
-		"function": "kontant",
+		"name": "Værdikort",
+		"function": "giftcard",
+		"action" : "16",
 		"width": "100"
 	}, {
-		"id" : "5",
-		"name": "Funktion",
-		"function": "kontant",
+		"id" : "6",
+		"name": "MobilePay",
+		"function": "mobilepay",
+		"action" : "17",
+		"width": "100"
+	},{
+		"id" : "7",
+		"name": "MobilePay",
+		"function": "mobilepay",
+		"action" : "17",
+		"width": "100"
+	},{
+		"id" : "8",
+		"name": "SWPP",
+		"function": "swipp",
+		"action" : "18",
+		"width": "100"
+	},{
+		"id" : "9",
+		"name": "Udbetal_restsaldo",
+		"function": "pay_remaining",
+		"action" : "19",
+		"width": "100"
+	},{
+		"id" : "10",
+		"name": "Donation",
+		"function": "donation",
+		"action" : "20",
+		"width": "100"
+	},{
+		"id" : "11",
+		"name": "Svind",
+		"function": "waste",
+		"action" : "21",
+		"width": "100"
+	},{
+		"id" : "12",
+		"name": "Kort",
+		"function": "card",
+		"action" : "22",
+		"width": "100"
+	},{
+		"id" : "13",
+		"name": "Indbetal",
+		"function": "card_insert",
+		"action" : "23",
+		"width": "100"
+	}
+]
+}, {
+	"tab": "Bordserver",
+	"buttons": [{
+		"id" : "14",
+		"name": "Parker_bord",
+		"action" : "600",
+		"function": "set_table",
+		"width": "100"
+	}, {
+		"id" : "15",
+		"name": "Hent_bord",
+		"function": "get_table",
+		"action" : "601",
+		"width": "100"
+	}, {
+		"id" : "16",
+		"name": "Send",
+		"function": "send_table",
+		"action" : "602",
+		"width": "100"
+	}, {
+		"id" : "17",
+		"name": "Split",
+		"function": "spilt_table",
+		"action" : "603",
 		"width": "100"
 	}]
 }, {
-	"tab": "Betalingsmiddler",
+	"tab": "TAW",
 	"buttons": [{
-		"id" : "6",
-		"name": "Kontant",
-		"function": "kontant",
+		"id" : "18",
+		"name": "Parker_TAW",
+		"action" : "700",
+		"function": "taw_set",
 		"width": "100"
 	}, {
-		"id" : "7",
-		"name": "Kontant",
-		"function": "kontant",
-		"width": "100"
-	}, {
-		"id" : "8",
-		"name": "Kontant",
-		"function": "kontant",
-		"width": "100"
-	}, {
-		"id" : "9",
-		"name": "Kontant",
-		"function": "kontant",
-		"width": "100"
-	}, {
-		"id" : "10",
-		"name": "Kontant",
-		"function": "kontant",
+		"id" : "19",
+		"name": "Hent_TAW",
+		"function": "taw_get",
+		"action" : "701",
 		"width": "100"
 	}]
+}, {
+	"tab": "Bon",
+	"buttons": [{
+		"id" : "20",
+		"name": "Find_Bon",
+		"function": "find_bon",
+		"action" : "2000",
+		"width": "100"
+	}, {
+		"id" : "21",
+		"name": "Proforma",
+		"function": "find_proforma",
+		"action" : "2001",
+		"width": "100"
+	}, {
+		"id" : "22",
+		"name": "Åben_pengeskuffe",
+		"function": "open_cashdrawer",
+		"action" : "2002",
+		"width": "100"
+	}]
+}, {
+	"tab": "Rabat",
+	"buttons": [{
+		"id" : "23",
+		"name": "Rabat_kr",
+		"function": "discount_flat",
+		"action" : "10000",
+		"width": "100"
+	}, {
+		"id" : "24",
+		"name": "Rabat_Pct",
+		"function": "discount_percentage",
+		"action" : "10001",
+		"width": "100"
+	}]
+}, {
+	"tab": "Keypad",
+	"buttons": [{
+		"id" : "25",
+		"name": "Enter",
+		"function": "enter",
+		"action" : "10052",
+		"width": "100"
+	}, {
+		"id" : "26",
+		"name": "Clear",
+		"function": "clear",
+		"action" : "10051",
+		"width": "100"
+	},{
+		"id" : "36",
+		"name": "0",
+		"function": "num_0",
+		"action" : "10050",
+		"width": "100"
+	},{
+		"id" : "27",
+		"name": "1",
+		"function": "num_1",
+		"action" : "10050",
+		"width": "100"
+	},{
+		"id" : "28",
+		"name": "2",
+		"function": "num_2",
+		"action" : "10050",
+		"width": "100"
+	},{
+		"id" : "29",
+		"name": "3",
+		"function": "num_3",
+		"action" : "10050",
+		"width": "100"
+	},{
+		"id" : "30",
+		"name": "4",
+		"function": "num_4",
+		"action" : "10050",
+		"width": "100"
+	},{
+		"id" : "31",
+		"name": "5",
+		"function": "num_5",
+		"action" : "10050",
+		"width": "100"
+	},{
+		"id" : "32",
+		"name": "6",
+		"function": "num_6",
+		"action" : "10050",
+		"width": "100"
+	},{
+		"id" : "33",
+		"name": "7",
+		"function": "num_7",
+		"action" : "10050",
+		"width": "100"
+	},{
+		"id" : "34",
+		"name": "8",
+		"function": "num_8",
+		"action" : "10050",
+		"width": "100"
+	},{
+		"id" : "35",
+		"name": "9",
+		"function": "num_9",
+		"action" : "10051",
+		"width": "100"
+	}]	
 }]
