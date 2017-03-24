@@ -3,10 +3,11 @@ error_reporting(E_ALL);
 ini_set('xdebug.var_display_max_depth', 5);
 ini_set('xdebug.var_display_max_children', 256);
 ini_set('xdebug.var_display_max_data', 1024);
-$data = json_decode($_POST["data"], true);
+$buttons = json_decode($_POST["buttons"], true);
+$dimensions = $_POST["dimensions"];
 
 $button_xml = "";
-foreach($data as $button){
+foreach($buttons as $button){
 	$button_id = $button["id"];
 	$button_grids = $button["grids"];
 	$button_text = $button["text"];
@@ -30,7 +31,7 @@ foreach($data as $button){
 	$start_x = min($dimension_x);
 	$start_y = min($dimension_y);
 	//generate button xml
-	$button_xml .=  "<button id=\"$button_id\" text=\"$button_text\" action=\"10050\" p1=\"\" color=\"1\" font=\"1\" enabled=\"1\">".
+	$button_xml .=  "<button id=\"$button_id\" text=\"$button_text\" action=\"$button_action\" p1=\"\" color=\"1\" font=\"1\" enabled=\"1\">".
 						"<location x=\"$start_x\" y=\"$start_y\"/>".
 						"<size width=\"$width\" height=\"$height\"/>".
 						"<message popup=\"0\" popuptime=\"2000\"><![CDATA[]]></message>".
@@ -40,7 +41,7 @@ foreach($data as $button){
 
 //combine xml
 $xml = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>".
-			"<buttons x_units=\"7\" y_units=\"5\">".
+			"<buttons x_units=\"".$dimensions["x"]."\" y_units=\"".$dimensions["y"]."\">".
 				$button_xml.
 			"</buttons>";
 

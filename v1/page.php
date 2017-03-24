@@ -18,8 +18,8 @@
 		<div style="position:relative;float:left">
 			<form action="javascript:setGridDimensions()" method="POST" id="grid-setter">
 				<div class="input_grid_wrapper">
-					<input id="grid_x" type="number" min="1" max="5" step="1" value="5" />
-					<input id="grid_y" type="number" min="1" max="5" step="1" value="5" />
+					<input id="grid_x" type="number" min="1" max="20" step="1" value="5" />
+					<input id="grid_y" type="number" min="1" max="20" step="1" value="5" />
 					<input type="submit" value="Go!" />
 				</div>
 			<form>

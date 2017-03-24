@@ -65,7 +65,8 @@
 
 .tab-text {
 	margin: auto;
-	font-family: "Verdana", Verdana, sans-serif;
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: #3F3F3F;
 }
 
 .tab-content {
@@ -74,7 +75,7 @@
 }
 
 .tab-content-actual {
-	display:none;
+	visibility: hidden;
 	position: relative;
 	padding: 10px;
 }
@@ -92,7 +93,6 @@
     border: 1px solid #3f3f3f;
     text-align: center;
     margin: 5px;
-    line-height: 70px;
     z-index: 5;
 }
 

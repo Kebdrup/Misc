@@ -1,5 +1,5 @@
 [{
-	"tab": "Funktioner",
+	"tab": "Betalingsmiddler",
 	"buttons": [{
 		"id" : "1",
 		"name": "Kontant",
@@ -44,7 +44,7 @@
 		"width": "100"
 	},{
 		"id" : "9",
-		"name": "Udbetal_restsaldo",
+		"name": "Udbetal restsaldo",
 		"function": "pay_remaining",
 		"action" : "19",
 		"width": "100"
@@ -78,13 +78,13 @@
 	"tab": "Bordserver",
 	"buttons": [{
 		"id" : "14",
-		"name": "Parker_bord",
+		"name": "Parker bord",
 		"action" : "600",
 		"function": "set_table",
 		"width": "100"
 	}, {
 		"id" : "15",
-		"name": "Hent_bord",
+		"name": "Hent bord",
 		"function": "get_table",
 		"action" : "601",
 		"width": "100"
@@ -105,13 +105,13 @@
 	"tab": "TAW",
 	"buttons": [{
 		"id" : "18",
-		"name": "Parker_TAW",
+		"name": "Parker TAW",
 		"action" : "700",
 		"function": "taw_set",
 		"width": "100"
 	}, {
 		"id" : "19",
-		"name": "Hent_TAW",
+		"name": "Hent TAW",
 		"function": "taw_get",
 		"action" : "701",
 		"width": "100"
@@ -120,7 +120,7 @@
 	"tab": "Bon",
 	"buttons": [{
 		"id" : "20",
-		"name": "Find_Bon",
+		"name": "Find Bon",
 		"function": "find_bon",
 		"action" : "2000",
 		"width": "100"
@@ -132,7 +132,7 @@
 		"width": "100"
 	}, {
 		"id" : "22",
-		"name": "Åben_pengeskuffe",
+		"name": "Åben pengeskuffe",
 		"function": "open_cashdrawer",
 		"action" : "2002",
 		"width": "100"
@@ -147,7 +147,7 @@
 		"width": "100"
 	}, {
 		"id" : "24",
-		"name": "Rabat_Pct",
+		"name": "Rabat Pct",
 		"function": "discount_percentage",
 		"action" : "10001",
 		"width": "100"

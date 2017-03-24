@@ -11,8 +11,8 @@ function set_tab(current_tab){
 	//change tab content
 	var tab_id = current_tab.id;
 	var id = tab_id.substring(tab_id.indexOf("-")+1, tab_id.length);
-	$(".tab-content-actual").hide();
-	$("#content-"+id).show();
+	$(".tab-content-actual").css("visibility", "hidden");
+	$("#content-"+id).css("visibility", "visible");
 }
 
 $(document).ready(function(){
@@ -35,7 +35,7 @@ $(document).ready(function(){
 					//generates button html
 					var button_width = parseInt(this.width); 
 					var position_css = 'left:'+left+';top:'+top+';';
-					html_buttons += '<div id="button-'+this.id+'" class="button resizable draggable" style="position:absolute;'+position_css+'" data-default-top="'+top+'" data-default-left="'+left+'"><div class="drag-zone"><span class="button-text">'+this.name+'</span></div></div>';
+					html_buttons += '<div id="button-'+this.id+'" class="button resizable draggable" style="position:absolute;'+position_css+'" data-action="'+this.action+'" data-default-height="'+button_height+'" data-default-width="'+button_width+'" data-default-top="'+top+'" data-default-left="'+left+'"><div class="drag-zone"><span class="button-text">'+this.name+'</span></div></div>';
 					//set position of the next button
 					left += (margin+button_width);
 					if((left+button_width+margin) > menu_width){//if true the button will overflow the container
@@ -43,7 +43,7 @@ $(document).ready(function(){
 						left = margin;
 					}
 				});
-				html_content = '<div id="content-'+tab_index+'" class="tab-content-actual" style="display:none">'+html_buttons+'</div>';
+				html_content = '<div id="content-'+tab_index+'" class="tab-content-actual" style="visibility:hidden">'+html_buttons+'</div>';
 				//append to html
 				$(".menu-tabs").append(html_tab);
 				$(".tab-content").append(html_content);
@@ -52,9 +52,19 @@ $(document).ready(function(){
 
 			//set drag, drop and resizablility for buttons
 			$(".draggable").draggable({
-				revert: "invalid",
-				revertDuration: 200,
-				handle: ".drag-zone"
+				handle: ".drag-zone",
+				stop: function(event, ui){
+					//this should detect if element needs to be moved back to its start position (outside droppable)					
+					var dragged_to_rect = {"left": ui.position.left, "right" : ui.position.left+ui.helper.width(), "top" : ui.position.top, "bottom" : ui.position.top+ui.helper.height()};
+					var isover = overlap(dragged_to_rect, $("#button_grid")[0], 1);
+					if(!isover){
+						//set offset and size to default 
+						this.style.top = this.attributes["data-default-top"].value;
+						this.style.left = this.attributes["data-default-left"].value;
+						this.style.width = this.attributes["data-default-width"].value;
+						this.style.height = this.attributes["data-default-height"].value;
+					}
+				}
 			});
 
 			$(".droppable").droppable({
@@ -111,7 +121,7 @@ $(document).ready(function(){
 			$.ajax({
 				method: "POST",
 				url: 'save_layout.php',
-				data: {"data" : JSON.stringify(window.gridmodel.buttons)},			
+				data: {"buttons" : JSON.stringify(window.gridmodel.buttons), "dimensions" : {"x": 5, "y": 5}},			
 				success: function(data){
 					$("#feedback").html(data);
 				}

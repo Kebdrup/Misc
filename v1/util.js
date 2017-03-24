@@ -1,6 +1,10 @@
 
-function overlap(elem1, elem2){
-	rect1 = elem1.getBoundingClientRect();
+function overlap(elem1, elem2, mode = 0){
+	if(mode == 1){
+		rect1 = elem1;
+	}else{
+		rect1 = elem1.getBoundingClientRect();
+	}
 	rect2 = elem2.getBoundingClientRect();
 	var overlap = !(rect1.right < rect2.left || 
 			rect1.left > rect2.right || 
