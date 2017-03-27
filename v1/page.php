@@ -9,22 +9,27 @@
 		<script src="onload.js"></script>
 	</head>
 	<body>
-		<div class="menu" style="float:left">
-			<div class="menu-tabs">		
+		<span class="title">Rediger Knapplacering</span>
+		<div id="options-wrapper">
+			<div class="options">
+				<form action="javascript:setGridDimensions()" method="POST" id="grid-setter">
+					<div class="input_grid_wrapper">
+						<input id="grid_x" type="number" min="1" max="20" step="1" value="7" />
+						<input id="grid_y" type="number" min="1" max="20" step="1" value="6" />
+						<input type="submit" value="Go!" />
+					</div>
+				</form>
 			</div>
-			<div class="tab-content">
+			<button type="button" id="save-layout">Gem</button>
+			<div class="menu">
+				<div class="menu-tabs">		
+				</div>
+				<div class="tab-content">
+				</div>
 			</div>
 		</div>
-		<div style="position:relative;float:left">
-			<form action="javascript:setGridDimensions()" method="POST" id="grid-setter">
-				<div class="input_grid_wrapper">
-					<input id="grid_x" type="number" min="1" max="20" step="1" value="5" />
-					<input id="grid_y" type="number" min="1" max="20" step="1" value="5" />
-					<input type="submit" value="Go!" />
-				</div>
-			<form>
+		<div class="grid-menu">
 			<table id="button_grid" class="droppable"></table>
-			<button type="button" id="save-layout">Save</button>
 		</div>
 		<span id='feedback'></span>
 	</body>
