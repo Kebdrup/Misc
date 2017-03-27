@@ -5,6 +5,11 @@ function GridModel(x,y){
 	this.buttons = [];
 	this.button_grids = [];
 	this.addButton = function(button){
+		//check if button is placed on grid (to avoid resize drops)
+		var is_placed = overlap(button[0], $("#button_grid")[0])
+		if(!is_placed){
+			return;
+		}
 		var intersect = check_for_intersect(this.button_grids, this.buttons);
 		this.button_grids.sort(function(a,b){
 			return (a[0]+a[1])-(b[0]+b[1]);

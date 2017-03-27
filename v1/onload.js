@@ -11,8 +11,14 @@ function set_tab(current_tab){
 	//change tab content
 	var tab_id = current_tab.id;
 	var id = tab_id.substring(tab_id.indexOf("-")+1, tab_id.length);
-	$(".tab-content-actual").css("visibility", "hidden");
-	$("#content-"+id).css("visibility", "visible");
+	//$(".tab-content-actual").css("visibility", "hidden");
+	$(".tab-content-actual").find(".button").each(function(){
+		var is_placed = overlap($(this)[0], $("#button_grid")[0]);
+		if(!is_placed){
+			$(this).css("visibility", "hidden");
+		}
+	});
+	$("#content-"+id+" .button").css("visibility", "visible");
 }
 
 $(document).ready(function(){
@@ -64,7 +70,8 @@ $(document).ready(function(){
 						this.style.width = this.attributes["data-default-width"].value;
 						this.style.height = this.attributes["data-default-height"].value;
 					}
-				}
+				},
+				zIndex: 100
 			});
 
 			$(".droppable").droppable({
@@ -76,6 +83,16 @@ $(document).ready(function(){
 			$(".resizable").resizable({
 				stop: function(event, ui){
 					var obj = ui.element;
+					//check if the button is actually placed on grid (if not, don't resize)
+					var is_placed = overlap(obj[0], $("#button_grid")[0])
+					if(!is_placed){
+						obj[0].style.top = obj[0].attributes["data-default-top"].value;
+						obj[0].style.left = obj[0].attributes["data-default-left"].value;
+						obj[0].style.width = obj[0].attributes["data-default-width"].value;
+						obj[0].style.height = obj[0].attributes["data-default-height"].value;
+						return;
+					}
+					//call over on all overlapping droppables to mimick dragging
 					$(".drop-zone").each(function(){
 						var isover = overlap(this,obj[0]);
 						if(isover){
@@ -98,14 +115,17 @@ $(document).ready(function(){
 			set_tab($("#tab-1")[0]);
 
 			//remove button from grid
-			$(".button").on("mousedown", function(){
+			$(".button").on("mousedown", function(event){
+				event.stopPropagation();
 				var id_attr = this.id;
 				var current_id = id_attr.substring(id_attr.indexOf("-")+1, id_attr.length);
 				window.gridmodel.button_grid = [];
 				//check all buttons for this button
 				$.each(window.gridmodel.buttons, function(index, button){
-					if(button.id == current_id){
-						gridmodel.buttons.splice(index,1);
+					if(typeof button !== 'undefined'){//button may already have been spliced
+						if(button.id == current_id){
+							window.gridmodel.buttons.splice(index,1);
+						}
 					}
 				});
 			});

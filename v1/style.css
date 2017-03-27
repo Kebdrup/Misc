@@ -63,6 +63,10 @@
 	text-align:center;
 }
 
+.tab:hover {
+	cursor: pointer;
+}
+
 .tab-text {
 	margin: auto;
 	font-family: "Arial Black", Gadget, sans-serif;
@@ -76,7 +80,7 @@
 
 .tab-content-actual {
 	visibility: hidden;
-	position: relative;
+	position: absolute;
 	padding: 10px;
 }
 

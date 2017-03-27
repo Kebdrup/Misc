@@ -153,7 +153,7 @@
 		"width": "100"
 	}]
 }, {
-	"tab": "Keypad",
+	"tab": "Funktioner",
 	"buttons": [{
 		"id" : "25",
 		"name": "Enter",
@@ -225,6 +225,36 @@
 		"name": "9",
 		"function": "num_9",
 		"action" : "10051",
+		"width": "100"
+	},{
+		"id" : "36",
+		"name": "Forside",
+		"function": "frontpage",
+		"action" : "20000",
+		"width": "100"
+	},{
+		"id" : "37",
+		"name": "Keyboard",
+		"function": "keyboard",
+		"action" : "25000",
+		"width": "100"
+	},{
+		"id" : "38",
+		"name": "MSG",
+		"function": "message",
+		"action" : "25001",
+		"width": "100"
+	},{
+		"id" : "39",
+		"name": "Slet",
+		"function": "delete",
+		"action" : "25002",
+		"width": "100"
+	},{
+		"id" : "40",
+		"name": "X",
+		"function": "multiplier",
+		"action" : "25003",
 		"width": "100"
 	}]	
 }]
